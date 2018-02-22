@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-lg-2"></div>
+  <div class="col employee-form">
+    <form #employeeForm="ngForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input required class="form-control" name="name" #name="ngModel" type="text" [(ngModel)]="employee.name" placeholder="Enter name">
+      </div>
+      <div class="form-group">
+        <label for="position">Position</label>
+        <input required class="form-control" name="position" #name="ngModel" type="text" [(ngModel)]="employee.position" placeholder="Enter position">
+      </div>
+      <div class="form-group">
+        <label for="position">Office</label>
+        <input required class="form-control" name="office" #name="ngModel" type="text" [(ngModel)]="employee.office" placeholder="Enter office">
+      </div>
+      <div class="form-group">
+        <label for="position">Salary</label>
+        <input min="1" class="form-control" name="salary" #name="ngModel" type="text" [(ngModel)]="employee.salary" placeholder="Enter salary">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </form>
+  </div>
+  <div class="col-lg-2"></div>
