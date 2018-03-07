@@ -20,7 +20,7 @@
           <td>{{ item.office }}</td>
           <td>{{ item.salary }}</td>
           <th>
-            <button class="btn btn-success">Edit</button>
+            <button class="btn btn-success" (click)="editEmployee(item)">Edit</button>
             <button class="btn btn-warning">Delete</button>
           </th>
         </tr>

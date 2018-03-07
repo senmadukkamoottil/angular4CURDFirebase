@@ -15,16 +15,16 @@ export class ManageEmployeeService {
   }
 
   getData() {
-    // this.items = this.db.collection('items').valueChanges();
-    // return this.items;
-    // to get id modify code
-    this.items = this.db.collection('items').snapshotChanges().map(changes => {
-      return changes.map(a => {
-        const data = a.payload.doc.data() as Employee;
-        data.$key = a.payload.doc.id;
-      });
-    });
+    this.items = this.db.collection('items').valueChanges();
     return this.items;
+    // to get id modify code
+    // this.items = this.db.collection('items').snapshotChanges().map(changes => {
+    //   return changes.map(a => {
+    //     const data = a.payload.doc.data() as Employee;
+    //     data.id = a.payload.doc.id;
+    //   });
+    // });
+    // return this.items;
   }
 
   insertEmployee(employee: Employee) {
@@ -35,6 +35,10 @@ export class ManageEmployeeService {
         office: employee.offic
         salary: employee.salary
       });*/
+  }
+
+  editEmployee(employee: Employee) {
+    console.log('edit' + employee.name);
   }
 
 }

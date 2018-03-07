@@ -11,7 +11,7 @@ import { Observable } from 'rxjs/Observable';
 export class AddEmployeeComponent implements OnInit {
   items: Observable<any[]>;
   employee: Employee = {
-    id: '',
+    $key: '',
     name:  '',
     position: '',
     office: '',
